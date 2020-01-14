@@ -1,0 +1,188 @@
+<!doctype html>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Mac for Dummies</title>
+	<link rel="stylesheet" href="assets/css/main.css">
+	
+</head>
+<body>
+
+	<header>
+
+		<nav>
+			<div class="logo">
+				<h1>
+					Mac for Dummies
+				</h1>
+			</div>
+
+			<div class="menu">
+				<ul>
+					<li><a href="#christmas">Home
+					</a></li>
+					<li><a href="#services">Services
+					</a></li>
+					<li><a href="#contact">Contact
+					</a></li>
+				</ul>
+			</div>
+			<div class="clearfix"></div>
+		</nav>
+
+		<div class="hero">
+			<div class="hero-img">
+				<div class="hero-text">
+					<h1>
+						Welcome to your personal page:<br>
+						Mac for Dummies
+					</h1>
+					<a href="#name">
+						&#10155 Get started!
+					</a>
+				</div>
+			</div>
+		</div>
+
+
+	</header>
+
+
+	<main class="wrapper">
+		<section class="name" id="name">
+			<div class="bgImg">
+				<div class="bgContent">
+					<form>
+					<input type="text" class="input" placeholder="What's your name?"></br>
+					<button type="submit" class="button">
+						Submit
+					</button>
+
+					</form>
+
+				</div>
+			</div>
+		</section>
+
+		<section class="christmas" id="christmas">
+			<div class="bgImg">
+				<div class="bgContent">
+					<h2>
+						Hey <span class="inputName"></span>! <br>
+						Hoping you will enjoy your Mac. <br>
+						Your support team wishes you a merry christmas!
+					</h2>
+					<img src="assets/images/christmasSticker.jpg" alt="Merry Christmas!">
+				</div>
+			</div>
+		</section>
+
+		<section class="services" id="services">
+					<div class="bgImg">
+						<div class="bgContent">
+							<h2>
+								Mac first aid 🚑;
+							</h2>
+
+							<div class="services-all">
+							<div class="services-content">
+							<h3>
+								Shortcuts
+							</h3>
+
+							<ul>
+								<li>
+									<a href="https://www.dummies.com/computers/macs/macbook/macbook-all-in-one-for-dummies-cheat-sheet/">Cheat Sheet</a>
+								</li>
+								<li>
+									<a href="https://support.apple.com/de-de/HT201236">Official Support</a>
+								</li>
+							</ul>
+
+							<h3>
+								Tipps
+							</h3>
+
+							<ul>
+								<li>
+								<a href="https://www.maceinsteiger.de/how-to/">Mac Einsteiger</a>
+							</li>
+								<li>
+									<a href="https://www.maclife.de/ratgeber/22-tricks-jeder-mac-anwender-kennen-sollte-10085670.html#pagergalerie">Ratgeber</a>
+								</li>
+							</ul>
+							</div>
+							<div class="services-image">
+							<img src="assets/images/apple.png" alt="Cheats">
+							</div>
+							</div>
+						</div>
+					</div>
+					<div class="bgImg2">
+						
+					</div>
+				</section>
+
+				<section class="contact" id="contact">
+					<div class="bgImg">
+						<div class="bgContent">			<h2>
+								Don't panic, contact your support team:
+							</h2>
+							
+							<div class="contact-text">
+								<h3>Your team is available 7/7 and 24/24 under following email and phone number:</h3>
+								<br/>e-mail: <a href="mailto:lisa.66@hotmail.com">lisa.66@hotmail.com</a>
+								<br/><br/>mobile: 
+								<a href="tel:+436706061313">+43 670 606 1313</a> 
+							</div>
+							<div class="team-img">
+								<img src="assets/images/ninja.jpg" alt="Help Team">
+							</div>	
+						</div>
+					</div>
+				</section>
+
+	</main>
+
+
+	<footer></footer>
+
+
+<script type="text/javascript">
+	var input=document.querySelector('.input');
+	var button=document.querySelector('.button');
+	var inputName=document.querySelector('.inputName');
+	var logo=document.querySelector('.logo');
+
+
+	button.addEventListener('click', function(e){
+		e.preventDefault();
+		
+		if (input.value.length <3 ) {
+			alert("Name too small.");
+			return;
+		}
+
+		inputName.innerHTML = input.value;
+		document.querySelector('.hero').style.display='none';
+		document.querySelector('.name').style.display='none';
+		document.querySelector('nav').style.display='block';
+		document.querySelector('.christmas').style.display='block';
+		document.querySelector('.services').style.display='block';
+		document.querySelector('.contact').style.display='block';
+	});	
+
+	logo.addEventListener('click', function(x){
+		document.querySelector('.hero').style.display='block';
+		document.querySelector('.name').style.display='block';
+		document.querySelector('nav').style.display='none';
+		document.querySelector('.christmas').style.display='none';
+		document.querySelector('.services').style.display='none';
+		document.querySelector('.contact').style.display='none';
+	});
+</script>
+<script src="assets/js/snowing.js"></script>
+
+</body>
+</html>
